@@ -12,7 +12,7 @@ function ProductCard({ data }) {
   return (
     <Card className="shadow h-100">
       <Link to={productPage}>
-        <Card.Img style={{ objectFit: "cover", height: "200px" }} variant="top" src={imageUrl} />
+        <Card.Img id="card-img" variant="top" src={imageUrl} />
       </Link>
       <Card.Body>
         <Card.Title>{title}</Card.Title>

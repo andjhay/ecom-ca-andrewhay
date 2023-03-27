@@ -6,12 +6,12 @@ function SearchDropdown({ searchInput, dataFiltered }) {
   const productPage = "/product/";
   if (searchInput)
     return (
-      <ListGroup style={{ zIndex: "1" }} className="position-absolute">
-        {dataFiltered !== "" ? (
+      <ListGroup id="dropdown-search" className="position-absolute bg-secondary">
+        {dataFiltered.length > 0 ? (
           dataFiltered.map((product) => (
-            <ListGroup.Item key={product.id}>
-              <Link to={productPage + product.id}>{product.title}</Link>
-            </ListGroup.Item>
+            <Link className="text-black" to={productPage + product.id}>
+              <ListGroup.Item key={product.id}>{product.title}</ListGroup.Item>
+            </Link>
           ))
         ) : (
           <ListGroup.Item>No Products match the search</ListGroup.Item>
