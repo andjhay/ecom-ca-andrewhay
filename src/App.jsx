@@ -20,12 +20,14 @@ function App() {
 
   function onSearchInputChange(searchValue) {
     setSearchInput(searchValue);
-    const results = data?.filter((product) => {
+    const results = data.filter((product) => {
       if (
         product.title.toLowerCase().includes(searchValue.toLowerCase()) === true ||
         product.description.toLowerCase().includes(searchValue.toLowerCase()) === true
       ) {
         return true;
+      } else {
+        return false;
       }
     });
     setFilteredProducts(results);
