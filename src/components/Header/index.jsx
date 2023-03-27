@@ -1,5 +1,5 @@
 import React from "react";
-import TopNav from "../Nav";
+import TopNav from "../TopNav";
 
 function Header() {
   return (

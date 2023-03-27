@@ -1,9 +1,9 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 
-function ReviewCard({ review, key }) {
+function ReviewCard({ review }) {
   return (
-    <Card key={key} className="my-2">
+    <Card className="my-2">
       <Card.Body>
         <Card.Title>
           {review.username} - {review.rating}/5

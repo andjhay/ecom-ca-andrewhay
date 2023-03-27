@@ -35,11 +35,11 @@ function ProductCard({ data }) {
       </Card.Body>
       <Card.Footer className="d-flex justify-content-center">
         <Link to={productPage}>
-          <Button className="m-2" variant="primary">
+          <Button variant="custom" className="m-2">
             View Product
           </Button>
         </Link>
-        <Button className="m-2" onClick={() => addToCartOnClick(id)}>
+        <Button variant="custom" className="m-2" onClick={() => addToCartOnClick(id)}>
           Add to Cart
         </Button>
       </Card.Footer>

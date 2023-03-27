@@ -1,4 +1,28 @@
+:root {
+  --light-blue: #81a7e8;
+  --button-blue: #4369ae;
+  --button-light-blue: #4368aebd;
+  --custom-grey: #9d9d9d;
+}
+
 // Keeps page from resizing when content doesn't overflow document height
 body {
   overflow-y: scroll;
+}
+
+.bg-nav {
+  background-color: var(--light-blue);
+}
+
+.bg-footer {
+  background-color: var(--custom-grey);
+}
+
+.btn-custom {
+  background-color: var(--button-blue) !important;
+  color: white !important;
+}
+
+.btn-custom:hover {
+  background-color: var(--button-light-blue) !important;
 }

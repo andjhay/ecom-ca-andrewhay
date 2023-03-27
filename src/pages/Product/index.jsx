@@ -50,7 +50,9 @@ function Product() {
                 </b>
               )}
             </p>
-            <Button onClick={() => addToCartOnClick(id)}>Add to Cart</Button>
+            <Button variant="custom" onClick={() => addToCartOnClick(id)}>
+              Add to Cart
+            </Button>
           </Container>
           <Container className="my-2">
             <h4>Reviews - Average Rating: {rating} </h4>

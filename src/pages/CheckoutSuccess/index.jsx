@@ -9,7 +9,7 @@ function CheckoutSuccess() {
       <Container className="text-center m-5">
         <h2>Products Ordered successfully</h2>
         <Link to="/">
-          <Button>Return to Homepage</Button>
+          <Button variant="custom">Return to Homepage</Button>
         </Link>
       </Container>
     </>
