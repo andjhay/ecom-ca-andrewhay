@@ -1,3 +1,7 @@
+# About
+
+Course assignment for javascript frameworks in year 2 of Noroff Front-End degree - Link to deployed site https://ecommerce-ca-andrewhay.netlify.app
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
