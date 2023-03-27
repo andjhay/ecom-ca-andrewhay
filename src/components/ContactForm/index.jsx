@@ -9,15 +9,17 @@ function ContactForm() {
     const form = [...event.target];
     let formData = [];
     form.forEach((target) => {
-      let key = target.id;
-      let value = target.value;
-      let formEntry = {};
-      formEntry[key] = value;
-      target.value = "";
-      formData.push(formEntry);
+      if (target.id) {
+        let key = target.id;
+        let value = target.value;
+        let formEntry = {};
+        formEntry[key] = value;
+        target.value = "";
+        formData.push(formEntry);
+      }
     });
-    console.log(formData);
     alert("Contact Form Submitted");
+    console.log(formData);
   };
 
   return (
