@@ -18,7 +18,7 @@ function Product() {
   let discountPercentage = Math.round(100 - (discountedPrice / price) * 100);
 
   if (isLoading) {
-    return <div>Loading posts</div>;
+    return <div>Loading Product</div>;
   }
 
   if (isError) {
