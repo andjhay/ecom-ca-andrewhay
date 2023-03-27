@@ -12,10 +12,18 @@ import ReviewCard from "../../components/ReviewCard";
 function Product() {
   let { id } = useParams();
   const productUrl = url + "/" + id;
-  const { data } = useApi(productUrl);
+  const { data, isLoading, isError } = useApi(productUrl);
   const { addToCartOnClick } = useCart();
   const { title, imageUrl, description, price, discountedPrice, rating, reviews } = data;
   let discountPercentage = Math.round(100 - (discountedPrice / price) * 100);
+
+  if (isLoading) {
+    return <div>Loading posts</div>;
+  }
+
+  if (isError) {
+    return <div>Error loading data</div>;
+  }
 
   return (
     <Container>
@@ -42,7 +50,9 @@ function Product() {
                 </b>
               )}
             </p>
-            <Button onClick={() => addToCartOnClick(id)}>Add to Cart</Button>
+            <Button variant="custom" onClick={() => addToCartOnClick(id)}>
+              Add to Cart
+            </Button>
           </Container>
           <Container className="my-2">
             <h4>Reviews - Average Rating: {rating} </h4>

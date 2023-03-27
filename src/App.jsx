@@ -18,11 +18,9 @@ function App() {
   const [searchInput, setSearchInput] = useState();
   const [filteredProducts, setFilteredProducts] = useState(data);
 
-  console.log(data)
-
   function onSearchInputChange(searchValue) {
     setSearchInput(searchValue);
-    const results = data.filter((product) => {
+    const results = data?.filter((product) => {
       if (
         product.title.toLowerCase().includes(searchValue.toLowerCase()) === true ||
         product.description.toLowerCase().includes(searchValue.toLowerCase()) === true

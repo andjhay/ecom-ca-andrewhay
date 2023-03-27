@@ -51,7 +51,7 @@ function Checkout({ data }) {
         <p>Total Products: {cart.length}</p>
         <p>Total Cost: {totalCost.toFixed(2)} NOK</p>
         <Link to="/checkout_success">
-          <Button onClick={() => clearCart()}>Checkout Now</Button>
+          <Button variant="custom" onClick={() => clearCart()}>Checkout Now</Button>
         </Link>
       </Container>
     </>
