@@ -16,6 +16,7 @@ function Product() {
   const { addToCartOnClick } = useCart();
   const { title, imageUrl, description, price, discountedPrice, rating, reviews } = data;
   let discountPercentage = Math.round(100 - (discountedPrice / price) * 100);
+  console.log(reviews);
 
   if (isLoading) {
     return <div>Loading Product</div>;
@@ -28,14 +29,14 @@ function Product() {
   return (
     <Container>
       <h1 className="text-center m-4">{title}</h1>
-      <Row xs={1} sm={2} className="g-4">
+      <Row xs={1} md={2} className="g-4">
         <Col>
-          <Container>
-            <img className="img-fluid" src={imageUrl} alt={description} />
+          <Container className="d-flex justify-content-center">
+            <img id="product-img" className="img-fluid shadow rounded" src={imageUrl} alt={description} />
           </Container>
         </Col>
         <Col>
-          <Container className="my-2">
+          <Container className="my-5">
             <p>{description}</p>
             <p>
               {price === discountedPrice ? (
@@ -56,9 +57,11 @@ function Product() {
           </Container>
           <Container className="my-2">
             <h4>Reviews - Average Rating: {rating} </h4>
-            {reviews?.map((review) => (
-              <ReviewCard review={review} key={review.id} />
-            ))}
+            {reviews?.length > 0 ? (
+              reviews.map((review) => <ReviewCard review={review} key={review.id} />)
+            ) : (
+              <p>No reviews yet</p>
+            )}
           </Container>
         </Col>
       </Row>

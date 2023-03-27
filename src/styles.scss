@@ -1,7 +1,7 @@
 :root {
   --light-blue: #81a7e8;
   --button-blue: #4369ae;
-  --button-light-blue: #4368aebd;
+  --button-light-blue: #5c79ae;
   --custom-grey: #9d9d9d;
 }
 
@@ -25,4 +25,17 @@ body {
 
 .btn-custom:hover {
   background-color: var(--button-light-blue) !important;
+}
+
+#product-img {
+  max-height: 50vh;
+}
+
+#card-img {
+  object-fit: cover;
+  height: 250px;
+}
+
+#dropdown-search {
+  z-index: 1;
 }
