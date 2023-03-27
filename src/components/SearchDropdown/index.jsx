@@ -7,7 +7,7 @@ function SearchDropdown({ searchInput, dataFiltered }) {
   if (searchInput)
     return (
       <ListGroup style={{ zIndex: "1" }} className="position-absolute">
-        {dataFiltered != "" ? (
+        {dataFiltered !== "" ? (
           dataFiltered.map((product) => (
             <ListGroup.Item key={product.id}>
               <Link to={productPage + product.id}>{product.title}</Link>
