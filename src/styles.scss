@@ -1,0 +1,4 @@
+// Keeps page from resizing when content doesn't overflow document height
+body {
+  overflow-y: scroll;
+}
