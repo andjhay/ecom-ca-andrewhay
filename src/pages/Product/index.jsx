@@ -43,7 +43,7 @@ function Product() {
             <p>
               {price === discountedPrice ? (
                 <span>
-                  <b>{price} NOK</b>
+                  <b>Price: {discountedPrice} NOK</b>
                 </span>
               ) : (
                 <b>

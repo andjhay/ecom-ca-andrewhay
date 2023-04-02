@@ -15,16 +15,22 @@ function TopNav() {
             <img src={Logo} alt="site logo" />
           </Navbar.Brand>
         </NavLink>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Toggle aria-controls="navbar-nav" />
+        <Navbar.Collapse id="navbar-nav">
           <Nav className="w-100 align-items-center">
-            <NavLink to="/" className="nav-link">
-              Home
-            </NavLink>
-            <NavLink to="/contact" className="nav-link">
-              Contact
-            </NavLink>
-            <CartLink />
+            <Nav.Item>
+              <NavLink to="/" className="nav-link">
+                Home
+              </NavLink>
+            </Nav.Item>
+            <Nav.Item>
+              <NavLink to="/contact" className="nav-link">
+                Contact
+              </NavLink>
+            </Nav.Item>
+            <Nav.Item className=" ms-sm-auto">
+              <CartLink />
+            </Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Container>
