@@ -34,9 +34,13 @@ function Checkout() {
         ))}
         <Col>
           <p>Total Products: {cart.length}</p>
-          <p>Total Cost: {<span className="text-decoration-line-through">{fullPrice.toFixed(2)}</span>} NOK</p>
+          {totalSavings > 0 ? (
+            <p>Total Cost: {<span className="text-decoration-line-through">{fullPrice.toFixed(2)}</span>} NOK</p>
+          ) : (
+            ""
+          )}
           <p>To Pay: {totalCost.toFixed(2)} NOK</p>
-          <p>You saved {totalSavings.toFixed(2)} NOK!</p>
+          {totalSavings > 0 ? <p>You saved {totalSavings.toFixed(2)} NOK!</p> : ""}
           <Link to="/checkout_success">
             <Button variant="custom" onClick={() => clearCart()}>
               Checkout Now
