@@ -9,7 +9,7 @@ function SearchDropdown({ searchInput, dataFiltered }) {
       <ListGroup id="dropdown-search" className="position-absolute bg-secondary">
         {dataFiltered.length > 0 ? (
           dataFiltered.map((product) => (
-            <Link className="text-black" to={productPage + product.id}>
+            <Link key={product.id} className="text-black" to={productPage + product.id}>
               <ListGroup.Item key={product.id}>{product.title}</ListGroup.Item>
             </Link>
           ))

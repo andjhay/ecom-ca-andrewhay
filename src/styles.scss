@@ -1,17 +1,17 @@
 :root {
-  --light-blue: #81a7e8;
-  --button-blue: #4369ae;
-  --button-light-blue: #5c79ae;
-  --custom-grey: #9d9d9d;
+  --main: #c2e173;
+  --button: #113371;
+  --button-light: #5c79ae;
+  --custom-grey: #d1d1d1;
 }
 
-// Keeps page from resizing when content doesn't overflow document height
 body {
+  // Keeps page from resizing when content doesn't overflow document height
   overflow-y: scroll;
 }
 
 .bg-nav {
-  background-color: var(--light-blue);
+  background-color: var(--main);
 }
 
 .bg-footer {
@@ -19,12 +19,12 @@ body {
 }
 
 .btn-custom {
-  background-color: var(--button-blue) !important;
+  background-color: var(--button) !important;
   color: white !important;
 }
 
 .btn-custom:hover {
-  background-color: var(--button-light-blue) !important;
+  background-color: var(--button-light) !important;
 }
 
 #product-img {
@@ -38,4 +38,28 @@ body {
 
 #dropdown-search {
   z-index: 1;
+}
+
+.navbar-brand img {
+  height: 75px;
+}
+
+a.nav-link {
+  font-weight: bold;
+  // Transparent border to keep all nav links aligned
+  border-bottom: solid 2px transparent;
+}
+
+a.active.nav-link {
+  font-weight: bold;
+  border-bottom: solid 2px #000000;
+}
+
+a.active.nav-link:hover,
+a.nav-link:hover {
+  color: white;
+}
+
+a .list-group-item:hover {
+  color: var(--main);
 }

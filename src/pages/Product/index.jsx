@@ -13,17 +13,19 @@ function Product() {
   let { id } = useParams();
   const productUrl = url + "/" + id;
   const { data, isLoading, isError } = useApi(productUrl);
-  const { addToCartOnClick } = useCart();
+  const { fullCart, addToCartOnClick } = useCart();
   const { title, imageUrl, description, price, discountedPrice, rating, reviews } = data;
   let discountPercentage = Math.round(100 - (discountedPrice / price) * 100);
-  console.log(reviews);
-
+  let productQuantity = 0;
+  fullCart?.forEach((product) => {
+    if (product.id === id) productQuantity = product.quantity;
+  });
   if (isLoading) {
-    return <div>Loading Product</div>;
+    return <h1 className="text-center my-3">Loading Products</h1>;
   }
 
   if (isError) {
-    return <div>Error loading data</div>;
+    return <h1 className="text-center my-3">Error Loading Products Contact Admin</h1>;
   }
 
   return (
@@ -51,6 +53,7 @@ function Product() {
                 </b>
               )}
             </p>
+            <p>{"In Cart: " + productQuantity}</p>
             <Button variant="custom" onClick={() => addToCartOnClick(id)}>
               Add to Cart
             </Button>

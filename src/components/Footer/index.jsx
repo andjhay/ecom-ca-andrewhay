@@ -1,12 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import styled from "styled-components";
+
+// Trying styled components
+const MyFooter = styled.footer`
+  padding: 10px;
+  opacity: 80%;
+`;
 
 function Footer() {
-  return (
-    <footer className="fixed-bottom bg-footer mt-auto text-center p-2">
-      <Link className="text-white" to="/contact">Contact</Link>
-    </footer>
-  );
+  return <MyFooter className="fixed-bottom bg-footer mt-auto text-center">&copy; Copyright 2023</MyFooter>;
 }
 
 export default Footer;
