@@ -18,8 +18,8 @@ function ContactForm() {
         formData.push(formEntry);
       }
     });
-    alert("Contact Form Submitted");
     console.log(formData);
+    alert("Contact Form Submitted");
   };
 
   return (
@@ -27,21 +27,21 @@ function ContactForm() {
       <Form onSubmit={submitForm}>
         <Form.Group className="mb-3" controlId="Full Name">
           <Form.Label>Full Name</Form.Label>
-          <Form.Control required minLength={3} type="name" placeholder="John Doe" />
+          <Form.Control required minLength={3} type="name" placeholder="John Doe (required)" />
         </Form.Group>
         <Form.Group className="mb-3" controlId="Subject">
           <Form.Label>Subject</Form.Label>
-          <Form.Control required minLength={3} type="text" placeholder="" />
+          <Form.Control required minLength={3} type="text" placeholder="(required)" />
         </Form.Group>
         <Form.Group className="mb-3" controlId="Email">
           <Form.Label>Email address</Form.Label>
-          <Form.Control required type="email" placeholder="name@example.com" />
+          <Form.Control required type="email" placeholder="name@example.com (required)" />
         </Form.Group>
         <Form.Group className="mb-3" controlId="Message">
           <Form.Label>Message</Form.Label>
-          <Form.Control required minLength={3} as="textarea" rows={3} />
+          <Form.Control required minLength={3} as="textarea" placeholder="(required)" rows={3} />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button variant="custom" type="submit">
           Submit
         </Button>
       </Form>

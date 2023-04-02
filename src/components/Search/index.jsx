@@ -10,7 +10,7 @@ function Search({ searchInput, onSearchInputChange, dataFiltered }) {
 
   return (
     <Container className="container-fluid w-75">
-      <Form.Control className="mt-3" onChange={onChange} value={searchInput} placeholder="Search" aria-label="Search" />
+      <Form.Control className="mt-3" onChange={onChange} placeholder="Search" aria-label="Search" />
       <SearchDropdown searchInput={searchInput} dataFiltered={dataFiltered} />
     </Container>
   );
